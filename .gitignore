@@ -1,5 +1,7 @@
-*.swp
-*.sqlite3
-tmp/*
-log/*
-*.DS_Store
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/**/*
+*.rails2
+*/*.rails2
+*/*/*.rails2
