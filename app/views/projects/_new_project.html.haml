@@ -1,0 +1,12 @@
+%h3= "New Project for #{customer.name}"
+- form_for :project, :url => customer_projects_url(customer) do |f|
+  %label{:for => "project[name]"} Name
+  = f.text_field :name
+  
+  %label{:for => "project[description]"} Description
+  = f.text_area :description, {:rows => 5}
+  
+  %div.actions
+  = f.submit "create"
+  %em &#8208; or &#8208;
+  =link_to "Customer Home Page", customer_url(customer) 

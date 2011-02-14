@@ -9,7 +9,8 @@ Timetracker::Application.routes.draw do |map|
     customer.resources :time_logs, :collection => { :merge => :put, :start => :get, :stop  => :put }
   end
 
-  map.connect '/', :controller => "customers"
+ # map.connect '/', :controller => "customers"
+  root :to => "customers#index"
 
 
   # Install the default routes as the lowest priority.
