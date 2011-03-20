@@ -2,6 +2,8 @@ class Invoice < ActiveRecord::Base
   belongs_to :customer
   has_many :line_items
 
+  validates_presence_of :timestamp
+
   def total_hours
     self.line_items.inject(0) {|total, li| total += li.hours }
   end
