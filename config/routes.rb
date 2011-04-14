@@ -6,7 +6,7 @@ Timetracker::Application.routes.draw do |map|
 
     customer.resources :todos
     customer.resources :projects
-    customer.resources :time_logs, :collection => { :merge => :put, :start => :get, :stop  => :put }
+    customer.resources :time_logs, :collection => { :merge => :put, :start => :get, :stop  => :get }
   end
 
  # map.connect '/', :controller => "customers"

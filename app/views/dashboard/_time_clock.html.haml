@@ -2,9 +2,9 @@
   = link_to "work history&hellip;", customer_time_logs_url(customer)
 .timeclock
   - if time_log.nil?
-    .button.start= link_to "start the clock", "/customers/#{customer.id}/time_logs/start"
+    .button.start= link_to "start the clock", start_customer_time_logs_path(customer.id), :method => :get
   - else
-    .button.stop= link_to "#{time_log.total_time} minutes", "/customers/#{customer.id}/time_logs/stop", :method => :put
+    .button.stop= link_to "#{time_log.total_time} minutes", stop_customer_time_logs_path(customer.id), :method => :put
     %ul
       - time_log.time_bits.each do |time_bit|
         %li= time_bit.description

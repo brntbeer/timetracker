@@ -16,6 +16,10 @@ class InvoicesController < ApplicationController
   end
 
   def create
+    puts "LOLOL"
+    puts "LOLOL"
+    puts "LOLOL"
+    puts "LOLOL"
     @customer = Customer.find params[:customer_id]
     @customer.invoices << Invoice.create(params[:invoice])
 

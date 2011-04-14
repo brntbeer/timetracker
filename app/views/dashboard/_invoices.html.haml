@@ -19,6 +19,7 @@
 
         %label{:for => "invoice[description]"} Description
         = f.text_area :description, {:rows => 5}
+        = f.hidden_field :timestamp, {:value => Time.now.utc}
         
         .actions
           = f.submit "create"
