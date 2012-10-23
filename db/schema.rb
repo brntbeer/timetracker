@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -14,16 +15,16 @@ ActiveRecord::Schema.define(:version => 20110320190200) do
 
   create_table "customers", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "invoices", :force => true do |t|
     t.text     "description"
     t.datetime "due_at"
     t.integer  "customer_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
     t.integer  "timestamp"
   end
 
@@ -32,8 +33,8 @@ ActiveRecord::Schema.define(:version => 20110320190200) do
     t.float    "rate"
     t.string   "description"
     t.integer  "invoice_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "priorities", :force => true do |t|
@@ -45,15 +46,15 @@ ActiveRecord::Schema.define(:version => 20110320190200) do
     t.string   "name"
     t.string   "description"
     t.integer  "customer_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "time_bits", :force => true do |t|
     t.string   "description"
     t.integer  "time_log_id", :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "time_logs", :force => true do |t|
@@ -70,8 +71,8 @@ ActiveRecord::Schema.define(:version => 20110320190200) do
     t.boolean  "completed"
     t.integer  "customer_id", :null => false
     t.integer  "project_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
 end

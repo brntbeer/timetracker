@@ -1,19 +1,15 @@
-Timetracker::Application.routes.draw do |map|
-  map.resources :customers do |customer|
-    customer.resources :invoices do |invoice|
-      invoice.resources :line_items
+Timetracker::Application.routes.draw do
+  resources :customers do
+    resources :invoices do
+      resources :line_items
     end
 
-    customer.resources :todos
-    customer.resources :projects
-    customer.resources :time_logs, :collection => { :merge => :put, :start => :get, :stop  => :get }
+    resources :todos
+    resources :projects
+    resources :time_logs, :collection => { :merge => :put, :start => :get, :stop  => :get }
   end
 
  # map.connect '/', :controller => "customers"
   root :to => "customers#index"
 
-
-  # Install the default routes as the lowest priority.
-  map.connect ':controller/:action/:id'
-  map.connect ':controller/:action/:id.:format'
 end
