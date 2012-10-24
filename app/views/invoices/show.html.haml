@@ -10,26 +10,25 @@
     %h2= "Invoice Number: #{@invoice.timestamp}"
 %p#description= @invoice.description
 
-- form_for :line_item, :url => customer_invoice_line_items_url(@customer, @invoice) do |f|
-  %table#invoice
-    %thead
+%table#invoice
+  %thead
+    %tr
+      %td Description
+      %td.hours Hours
+      %td.rate Rate
+      %td.opts
+  %tbody
+    - @line_items.each do |li|
       %tr
-        %td Description
-        %td.hours Hours
-        %td.rate Rate
-        %td.opts
-    %tbody
-      - @line_items.each do |li|
-        %tr
-          %td= li.description
-          %td.hours= li.hours
-          %td.rate= number_to_currency(li.rate)
+        %td= li.description
+        %td.hours= li.hours
+        %td.rate= number_to_currency(li.rate)
       
-    %tfoot
-      %tr#total
-        %td Total
-        %td.hours= @invoice.total_hours
-        %td.rate= number_to_currency(@invoice.total_owed)
-        %td.opts
+  %tfoot
+    %tr#total
+      %td Total
+      %td.hours= @invoice.total_hours
+      %td.rate= number_to_currency(@invoice.total_owed)
+      %td.opts
 
 =render :partial => 'personal_info'
