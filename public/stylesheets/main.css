@@ -1,50 +1,258 @@
-body font {
-  family: "Delicious"; }
+body {
+  font-size: 62.5%;
+  font-family: "Georgia";
+  color: #333;
+  background-color: #eee; }
 
 a {
+  text-decoration: none;
   color: #2244aa; }
+  a:hover {
+    text-decoration: underline; }
 
-.my_info font {
-  family: "Delicious", "Adobe Garamond Pro"; }
+#page {
+  width: 900px;
+  margin: 0 auto;
+  padding: 0.2em 1em;
+  background-color: #fff; }
 
-#header font {
-  family: "Optima"; }
+.my_info {
+  padding: 1em;
+  text-align: center;
+  font-size: 1.2em;
+  font-family: "Georgia";
+  color: #999; }
+  .my_info div {
+    display: inline;
+    margin: 0 1em; }
+  .my_info .name {
+    font-weight: bold;
+    font-size: 1.2em; }
+
+.my_info.top {
+  margin-bottom: 1em;
+  border-bottom: 1px solid #ddd; }
+
+.my_info.bottom {
+  margin-top: 1em;
+  border-top: 1px solid #ddd; }
+
+#header {
+  font-family: "Helvetica";
+  font-style: italic;
+  margin: 0;
+  margin-top: 1em;
+  padding: 0;
+  border-bottom: 1px solid #333; }
+  #header span {
+    font-size: 1.75em;
+    color: #777; }
+  #header h1 {
+    font-size: 2.5em;
+    margin: 0 0.25em;
+    padding: 0;
+    padding-bottom: 0;
+    display: inline-block; }
+  #header h3 {
+    font-size: 1.75em;
+    margin: 0 0.25em;
+    padding: 0;
+    display: inline-block; }
 
 p#description {
+  margin: 0 auto;
+  margin-bottom: 1em;
+  font-size: 1.4em;
+  padding: 0.5em 1em;
+  border-top-width: 0;
+  -webkit-border-bottom-left-radius: 15px;
+  -webkit-border-bottom-right-radius: 15px;
   background-color: #e1eefc;
-  color: #333333; }
+  color: #333; }
 
-table#invoice tbody .hours, table#invoice tbody .rate {
-  color: #888888; }
-table#invoice tfoot {
-  background-color: #fff7cf; }
-  table#invoice tfoot td {
-    border-top: 1px solid #d7ae56;
+table#invoice {
+  margin: 0;
+  padding: 0;
+  width: 100%; }
+  table#invoice .hours, table#invoice .rate {
+    text-align: right; }
+  table#invoice thead {
+    font-size: 1.4em;
+    background-color: #333;
+    color: #FFF; }
+    table#invoice thead td {
+      margin: 0;
+      padding: 0.2em 0.5em;
+      background-color: #333; }
+  table#invoice tbody {
+    font-size: 1.4em;
+    background-color: #eee; }
+    table#invoice tbody .hours, table#invoice tbody .rate {
+      color: #888; }
+    table#invoice tbody td {
+      padding: 0.5em; }
+    table#invoice tbody .hours, table#invoice tbody .rate {
+      text-align: right; }
+      table#invoice tbody .hours input, table#invoice tbody .rate input {
+        width: 3em; }
+    table#invoice tbody textarea {
+      width: 100%; }
+  table#invoice tfoot {
     background-color: #fff7cf; }
+    table#invoice tfoot td {
+      font-size: 1.4em;
+      font-weight: bold;
+      padding: 0.5em;
+      border-top: 1px solid #d7ae56;
+      background-color: #fff7cf; }
+  table#invoice tr#total {
+    border: 0; }
 
 tr.even, li.even {
-  background-color: #eeeeee; }
+  background-color: #eee; }
 
 tr.odd, li.odd {
   background-color: #f8f8f8; }
 
-#page .dashboard ul {
-  font-size: 1.4em; }
-#page .dashboard li {
-  padding: 0.5em; }
-#page .dashboard #main .grouped_time_logs .timelog .date {
-  background-color: #e1eefc; }
-#page .dashboard #main div.more {
-  background-color: #fff7cf; }
-  #page .dashboard #main div.more a {
-    color: #2244aa; }
-    #page .dashboard #main div.more a font {
-      family: "Optima";
-      size: 0.9em; }
-#page .dashboard #secondary div.more {
-  background-color: #fff7cf; }
-  #page .dashboard #secondary div.more a {
-    color: #2244aa; }
-    #page .dashboard #secondary div.more a font {
-      family: "Optima";
-      size: 0.9em; }
+#page .dashboard {
+  margin: 1em 0; }
+  #page .dashboard ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1.4em; }
+  #page .dashboard .todos ul:hover {
+    color: #AAA; }
+  #page .dashboard .todos li:hover {
+    color: #333; }
+  #page .dashboard li {
+    padding: 0.5em; }
+  #page .dashboard .subheader {
+    background-color: #333;
+    color: #ccc;
+    padding: 0.2em 0.5em; }
+    #page .dashboard .subheader h3 {
+      color: #fff;
+      font-size: 1.4em;
+      font-weight: normal;
+      display: inline;
+      margin: 0;
+      float: left; }
+    #page .dashboard .subheader a {
+      color: #ccc;
+      float: right;
+      font-size: 1.2em;
+      font-weight: normal; }
+    #page .dashboard .subheader br {
+      clear: both; }
+  #page .dashboard #main {
+    padding: 0;
+    width: 64%;
+    float: left; }
+    #page .dashboard #main .grouped_time_logs .timelog td {
+      margin: 0.5em; }
+    #page .dashboard #main .grouped_time_logs .timelog .date {
+      background-color: #e1eefc;
+      color: #fff;
+      width: 20%;
+      font-size: 1.4em;
+      padding: 0.25em 0.25em;
+      text-align: right; }
+    #page .dashboard #main .grouped_time_logs .timelog li .date2 {
+      float: right; }
+    #page .dashboard #main .grouped_time_logs .timelog .options {
+      font-size: 0.75em;
+      padding: 0.25em;
+      -webkit-border-radius: 7px;
+      background-color: #333;
+      float: right;
+      font-weight: bold; }
+      #page .dashboard #main .grouped_time_logs .timelog .options a {
+        color: #fff; }
+    #page .dashboard #main .todos {
+      margin-bottom: 1em; }
+    #page .dashboard #main div.more {
+      font-size: 1.25em;
+      background-color: #fff7cf;
+      border-top: 1px solid #333;
+      padding: 0.5em;
+      padding-right: 0.75em;
+      margin-bottom: 1em;
+      -webkit-border-bottom-right-radius: 5px;
+      -webkit-border-bottom-left-radius: 5px; }
+      #page .dashboard #main div.more a {
+        font-family: "Helvetica";
+        font-size: 0.9em;
+        font-weight: bold;
+        color: #2244aa; }
+  #page .dashboard #secondary {
+    padding: 0;
+    width: 35%;
+    float: right; }
+    #page .dashboard #secondary div.more {
+      text-align: right;
+      font-size: 1.25em;
+      background-color: #fff7cf;
+      border-top: 1px solid #333;
+      padding: 0.5em;
+      padding-right: 0.75em;
+      margin-bottom: 1em;
+      -webkit-border-bottom-right-radius: 5px;
+      -webkit-border-bottom-left-radius: 5px; }
+      #page .dashboard #secondary div.more a {
+        font-family: "Helvetica";
+        font-size: 0.9em;
+        font-weight: bold;
+        color: #2244aa; }
+    #page .dashboard #secondary div.new form, #page .dashboard #secondary div.update form {
+      margin: 0;
+      padding: 0;
+      font-size: 1em; }
+      #page .dashboard #secondary div.new form label, #page .dashboard #secondary div.update form label {
+        text-align: left;
+        margin: 0;
+        padding: 0;
+        display: block;
+        width: 100%; }
+      #page .dashboard #secondary div.new form input, #page .dashboard #secondary div.update form input {
+        margin: 0;
+        margin-bottom: 0.5em;
+        padding: 0;
+        display: block;
+        width: 100%; }
+      #page .dashboard #secondary div.new form textarea, #page .dashboard #secondary div.update form textarea {
+        margin: 0;
+        margin-bottom: 0.5em;
+        padding: 0;
+        width: 100%; }
+      #page .dashboard #secondary div.new form div input, #page .dashboard #secondary div.update form div input {
+        width: auto;
+        display: inline;
+        margin: 0; }
+    #page .dashboard #secondary .timeclock .button {
+      padding: 1em; }
+      #page .dashboard #secondary .timeclock .button a {
+        -webkit-border-radius: 20px;
+        display: block;
+        width: 100%;
+        padding: 0.5em 0;
+        text-align: center;
+        font-size: 3em;
+        color: #fff;
+        text-decoration: none; }
+    #page .dashboard #secondary .timeclock .start a {
+      background-color: #0f0; }
+    #page .dashboard #secondary .timeclock .stop a {
+      background-color: #f00; }
+    #page .dashboard #secondary br {
+      clear: both; }
+  #page .dashboard form {
+    margin: 0;
+    padding: 0; }
+
+span.note {
+  -webkit-border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  font-size: 0.8em;
+  padding: 0.2em 0.4em; }

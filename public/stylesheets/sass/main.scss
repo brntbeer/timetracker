@@ -1,0 +1,341 @@
+$header_font: "Helvetica";
+$main_font: "Georgia";
+$my_info_font: "Georgia";
+$total_background: #fff7cf;
+$total_border: #d7ae56;
+$description_background: #e1eefc;
+$link_color: #24A;
+//"Helvetica Neue"
+
+
+body {
+  font-size: 62.5%;
+  font-family: $main_font;
+  color: #333;
+  background-color: #eee;
+}
+a {
+  text-decoration: none;
+  color: $link_color;
+  &:hover { text-decoration: underline; }
+}
+
+
+#page{
+  width: 900px;
+  margin: 0 auto;
+  padding: 0.2em 1em;
+  background-color: #fff;
+}
+
+.my_info {
+  padding: 1em;
+  text-align: center;
+  font-size: 1.2em;
+  font-family: $my_info_font;
+  color: #999;
+  div {
+    display: inline;
+    margin: 0 1em;
+  }
+  .name {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+}
+
+.my_info.top {
+  margin-bottom: 1em;
+  border-bottom: 1px solid #ddd;
+}
+
+.my_info.bottom {
+  margin-top: 1em;
+  border-top: 1px solid #ddd;
+}
+
+#header {
+  font-family: $header_font;
+  font-style: italic;
+  margin: 0;
+  margin-top: 1em;
+  padding: 0;
+  border-bottom: 1px solid #333;
+
+  span {
+    font-size: 1.75em;
+    color: #777;
+  }
+  h1 {
+    font-size: 2.5em;
+    margin: 0 0.25em;
+    padding: 0;
+    padding-bottom: 0;
+    display: inline-block;
+  }
+  h3 {
+    font-size: 1.75em;
+    margin: 0 0.25em;
+    padding: 0;
+    display: inline-block;
+  }
+}
+
+p#description {
+  margin: 0 auto;
+  margin-bottom: 1em;
+  font-size: 1.4em;
+  padding: 0.5em 1em;
+  border-top-width: 0;
+  -webkit-border-bottom-left-radius: 15px;
+  -webkit-border-bottom-right-radius: 15px;
+  background-color: $description_background;
+  color: #333;
+}
+  //-webkit-border-radius 20px
+  //-webkit-box-shadow 0 5px 5px #333
+  //-webkit-user-modify read-write
+
+table#invoice {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  .hours, .rate {
+    text-align: right;
+  }
+  
+  thead {
+    font-size: 1.4em;
+    background-color: #333;
+    color: #FFF;
+
+    td {
+      margin: 0;
+      padding: 0.2em 0.5em;
+      background-color: #333;
+    }
+  }
+  
+  tbody {
+    font-size: 1.4em;
+    background-color: #eee;
+
+    .hours, .rate {
+      color: #888;
+    }
+    td {
+      padding: 0.5em;
+    }
+    .hours, .rate {
+      text-align: right;
+
+      input { width: 3em; }
+    }
+    textarea { width: 100%; }
+  }
+
+  tfoot {
+    background-color: $total_background;
+
+    td {
+      font-size: 1.4em;
+      font-weight: bold;
+      padding: 0.5em;
+      border-top: 1px solid $total_border;
+      background-color: $total_background;
+    }
+  }
+  tr#total { border: 0; }
+}
+
+tr.even, li.even {
+  background-color: #eee;
+}
+
+tr.odd, li.odd {
+  background-color: #f8f8f8;
+}
+
+#page {
+  .dashboard {
+    margin: 1em 0;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 1.4em;
+    }
+    .todos ul:hover { color: #AAA; }
+    .todos li:hover { color: #333; }
+
+    li { padding: 0.5em; }
+
+    .subheader {
+      background-color: #333;
+      color: #ccc;
+      padding: 0.2em 0.5em;
+
+      h3 {
+        color: #fff;
+        font-size: 1.4em;
+        font-weight: normal;
+        display: inline;
+        margin: 0;
+        float: left;
+      }
+      a {
+        color: #ccc;
+        float: right;
+        font-size: 1.2em;
+        font-weight: normal;
+       }
+      br { clear: both; }
+    }
+
+    #main {
+      padding: 0;
+      width: 64%;
+      float: left;
+
+      .grouped_time_logs {
+        .timelog {
+          td { margin: 0.5em; }
+
+          .date {
+            background-color: $description_background;
+            color: #fff;
+            width: 20%;
+            font-size: 1.4em;
+            padding: 0.25em 0.25em;
+            text-align: right;
+          }
+
+          li {
+            .date2 { float: right; }
+          }
+
+          .options {
+            font-size: 0.75em;
+            padding: 0.25em;
+            -webkit-border-radius: 7px;
+            background-color: #333;
+            float: right;
+            font-weight: bold;
+
+            a { color: #fff; }
+          }
+        }
+      }
+      .todos { margin-bottom: 1em; }
+
+      div.more {
+        font-size: 1.25em;
+        background-color: $total_background;
+        border-top: 1px solid #333;
+        padding: 0.5em;
+        padding-right: 0.75em;
+        margin-bottom: 1em;
+        -webkit-border-bottom-right-radius: 5px;
+        -webkit-border-bottom-left-radius: 5px;
+        a {
+          font-family: $header_font;
+          font-size: 0.9em;
+          font-weight: bold;
+          color: $link_color;
+        }
+      }
+    }
+    #secondary {
+      padding: 0;
+      width: 35%;
+      float: right;
+
+      div.more {
+        text-align: right;
+        font-size: 1.25em;
+        background-color: $total_background;
+        border-top: 1px solid #333;
+        padding: 0.5em;
+        padding-right: 0.75em;
+        margin-bottom: 1em;
+        -webkit-border-bottom-right-radius: 5px;
+        -webkit-border-bottom-left-radius: 5px;
+
+        a {
+          font-family: $header_font;
+          font-size: 0.9em;
+          font-weight: bold;
+          color: $link_color;
+        }
+      }
+
+      div.new, div.update {
+        form {
+          margin: 0;
+          padding: 0;
+          font-size: 1em;
+
+          label {
+            text-align: left;
+            margin: 0;
+            padding: 0;
+            display: block;
+            width: 100%;
+          }
+          input {
+            margin: 0;
+            margin-bottom: 0.5em;
+            padding: 0;
+            display: block;
+            width: 100%;
+          }
+          textarea {
+            margin: 0;
+            margin-bottom: 0.5em;
+            padding: 0;
+            width: 100%;
+          }
+          div {
+            input {
+              width: auto;
+              display: inline;
+              margin: 0;
+            }
+          }
+        }
+      }
+      .timeclock {
+        .button {
+          padding: 1em;
+
+          a {
+            -webkit-border-radius: 20px;
+            display: block;
+            width: 100%;
+            padding: 0.5em 0;
+            text-align: center;
+            font-size: 3em;
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+        .start a { background-color: #0f0; }
+        .stop a { background-color: #f00; }
+      }
+      br { clear: both; }
+    }
+    form {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+span.note {
+  -webkit-border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  font-size: 0.8em;
+  padding:0.2em 0.4em;
+}
